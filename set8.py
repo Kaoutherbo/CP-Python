@@ -33,3 +33,14 @@ def what_century(year):
     return f"{century}{suffix}"
 
 # TASK 03-----------------------------------------------------------
+
+def in_array(array1, array2):
+    r = []
+    
+    for s2 in array2:
+        for s1 in array1:
+            if s1 in s2 and s1 not in r:
+                r.append(s1)
+    
+    r.sort()
+    return r

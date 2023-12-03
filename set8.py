@@ -24,3 +24,12 @@ def sec_deg_solver(a, b, c):
 
 # TASK 02 ------------------------------------------------------
 
+def what_century(year):
+    century = (int(year) - 1) // 100 + 1
+    if 10 <= century % 100 <= 20:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(century % 10, "th")
+    return f"{century}{suffix}"
+
+# TASK 03-----------------------------------------------------------

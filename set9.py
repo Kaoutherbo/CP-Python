@@ -5,3 +5,17 @@ def find_missing_letter(chars):
             return chr(ord(chars[i]) + 1)
         
 # TASK 02 -----------------------------------------
+def valid_braces(string):
+    stack = []
+    mapping = {')': '(', ']': '[', '}': '{'}
+
+    for char in string:
+        if char in mapping.values():
+            stack.append(char)
+        elif char in mapping.keys():
+            if not stack or stack.pop() != mapping[char]:
+                return False
+        else:
+            return False
+
+    return not stack

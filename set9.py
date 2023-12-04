@@ -19,3 +19,14 @@ def valid_braces(string):
             return False
 
     return not stack
+
+# TASK 03 -----------------------------------------------------
+from math import sqrt
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True

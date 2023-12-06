@@ -24,3 +24,15 @@ def encrypt(text, rule):
         encrypted_txt += chr(ascii_code)
         
     return encrypted_txt
+
+# TASK 03 ------------------------------------------------------------
+
+def queue_time(customers, n): # [2, 3, 10], 2
+    arr = [0] * n  # arr = [0, 0]
+    
+    for time in customers:
+        min_val = min(arr) # 0 # 0 # 2
+        min_index = arr.index(min_val) # 0 # 1 # 2
+        arr[min_index] += time  # [2, 0], # [2, 3] # [12, 3]
+
+    return max(arr) # max[12, 3] =  12

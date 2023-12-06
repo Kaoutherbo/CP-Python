@@ -18,10 +18,9 @@ def high(x):
 def encrypt(text, rule):
     
     encrypted_txt = ""
-    
+
     for char in text:
-        ascii_code = (ord(char) + rule) % 256
+        ascii_code = (ord(char) + rule) % 256 # use % to warp if the value exceeds 255
         encrypted_txt += chr(ascii_code)
         
     return encrypted_txt
-    

@@ -15,3 +15,13 @@ def high(x):
     return max_word
 
 # TASK 02 ------------------------------------------------------------
+def encrypt(text, rule):
+    
+    encrypted_txt = ""
+    
+    for char in text:
+        ascii_code = (ord(char) + rule) % 256
+        encrypted_txt += chr(ascii_code)
+        
+    return encrypted_txt
+    

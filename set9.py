@@ -7,12 +7,12 @@ def find_missing_letter(chars):
 # TASK 02 -----------------------------------------
 def valid_braces(string):
     stack = []
-    mapping = {')': '(', ']': '[', '}': '{'}
+    mapping = {')': '(', ']': '[', '}': '{'} # dictionary ( key : value )
 
     for char in string:
-        if char in mapping.values():
+        if char in mapping.values(): # ( or [ or {
             stack.append(char)
-        elif char in mapping.keys():
+        elif char in mapping.keys(): # )or ] or }
             if not stack or stack.pop() != mapping[char]:
                 return False
         else:

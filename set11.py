@@ -39,3 +39,20 @@ def decrypt(encrypted_text, n):
     return encrypted_text
 
 # TASK 03 ----------------------------------------------
+
+def stock_list(L, M):
+    if not L or not M:
+        return ""
+
+    category_sums = {category: 0 for category in M}
+
+    for book in L:
+        code, quantity = book.split()
+        category = code[0]
+
+        if category in M:
+            category_sums[category] += int(quantity)
+
+    result = " - ".join(f"({category} : {category_sums[category]})" for category in M)
+    return result
+

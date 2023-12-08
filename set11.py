@@ -34,7 +34,7 @@ def decrypt(encrypted_text, n):
     for _ in range(n):
         odd_chars = encrypted_text[:half_length]
         even_chars = encrypted_text[half_length:]
-        encrypted_text = ''.join(''.join(pair) for pair in zip(even_chars, odd_chars))
+        encrypted_text = ''.join(''.join(pair) for pair in zip(even_chars, odd_chars)) # zip make pairs (135 , 024) => (1, 0), (3, 2), (5, 4)
 
     return encrypted_text
 

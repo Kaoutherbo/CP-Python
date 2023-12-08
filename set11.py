@@ -13,3 +13,29 @@ def expanded_form(num):
     return ' + '.join(expnd_num[::-1])
 
 # TASK 02 ----------------------------------------------
+def encrypt(text, n):
+    if not text or n <= 0:
+        return text
+
+    for _ in range(n):
+        odd_chars = text[1::2]
+        even_chars = text[0::2]
+        text = odd_chars + even_chars
+
+    return text
+
+def decrypt(encrypted_text, n):
+    if not encrypted_text or n <= 0:
+        return encrypted_text
+
+    length = len(encrypted_text)
+    half_length = length // 2
+
+    for _ in range(n):
+        odd_chars = encrypted_text[:half_length]
+        even_chars = encrypted_text[half_length:]
+        encrypted_text = ''.join(''.join(pair) for pair in zip(even_chars, odd_chars))
+
+    return encrypted_text
+
+# TASK 03 ----------------------------------------------

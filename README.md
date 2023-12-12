@@ -16,3 +16,4 @@
 * with sum() to iterate over each character, calculate 
 * its  score (based on its position in the alphabet), 
 * and then sum all the scores.
+* 

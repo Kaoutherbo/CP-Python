@@ -1,4 +1,3 @@
-
 # CP-Python
 
 # TASK O2 from set 9:

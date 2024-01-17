@@ -33,3 +33,15 @@ def beautifulMatrix(matrix):
                     break
     return count
         
+def boyGirl(username):
+    username = username.lower()
+    distinct_chars = []
+    for char in username:
+        if char not in distinct_chars:
+            distinct_chars.append(char)
+    if len(distinct_chars) % 2 == 0:
+        return "CHAT WITH HER!"
+    else:
+        return "IGNORE HIM!"
+
+

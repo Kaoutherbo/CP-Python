@@ -8,3 +8,14 @@ def wetermelon(w):
     else:
         return "No"
         
+def tooLongWord(word):
+    if len(word) <= 10:
+        return word
+    else:
+        first = word[0]
+        last = word[-1]
+        count = len(word) - 2  
+        return f"{first}{count}{last}"
+    
+    
+    

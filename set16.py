@@ -18,4 +18,18 @@ def tooLongWord(word):
         return f"{first}{count}{last}"
     
     
-    
+def beautifulMatrix(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    count = 0
+
+    if matrix[2][2] == 1:
+        return 0
+    else:
+        for i in range(rows):
+            for j in range(cols):
+                if matrix[i][j] == 1:
+                    count += abs(2 - i) + abs(2 - j)
+                    break
+    return count
+        

@@ -1,6 +1,7 @@
 # CP-Python
 
 # TASK O2 from set 9:
+
 * We use a stack to keep track of the opening braces.
 * We iterate through each character in the input string.
 * If the character is an opening brace ('(', '[', '{'), we push it onto the stack.
@@ -16,3 +17,4 @@
 * with sum() to iterate over each character, calculate 
 * its  score (based on its position in the alphabet), 
 * and then sum all the scores.
+  

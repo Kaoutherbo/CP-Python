@@ -45,3 +45,23 @@ def boyGirl(username):
         return "IGNORE HIM!"
 
 
+def find_zero_sum_groups(arr, n):
+    result = []
+    
+    if len(arr) < n:
+        return "No elements to combine"
+    
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            for k in range(j + 1, len(arr)):
+                if arr[i] + arr[j] + arr[k] == 0:
+                    current_combination = sorted([arr[i], arr[j], arr[k]])
+                    if current_combination not in result:
+                        result.append(current_combination)
+    
+    if len(result) == 1:
+        return result[0] 
+    elif result:
+        return sorted(result)
+    else:
+        return "No combinations"

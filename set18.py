@@ -36,3 +36,14 @@ def helpfulMath(statement):
     sorted_numbers = sorted(numbers)
     new_statement = "+".join(map(str, sorted_numbers))
     return new_statement
+
+"""
+    Descritpion: Capitalization is writing a word with its first letter as 
+    a capital letter. Your task is to capitalize the given word.
+
+    wordCapitalize: Function that return the given word after capitalization.
+"""
+
+def wordCapitalize(word):
+    return word[0].upper() + word[1:]
+

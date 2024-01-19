@@ -47,3 +47,49 @@ def helpfulMath(statement):
 def wordCapitalize(word):
     return word[0].upper() + word[1:]
 
+
+""" 
+    
+"""
+
+def stone(n, statement):
+    count = 0
+    for i in range(n-1):
+          if  statement[i] == staement[i+1]:
+              count += 1
+    
+    return count 
+
+
+"""
+    oddStream: Function that prints only the odd numbers from 1 to n    
+"""
+
+def oddStream(n):
+    current_value = 1
+    for _ in range(n):
+        print(current_value)
+        current_value += 2
+
+"""
+    evenStream: Function that prints only the even numbers from 0 to n    
+"""
+def evenStream(n):
+    current_value = 0
+    for _ in range(n):
+        print(current_value)
+        current_value += 2
+
+"""
+    print_from_stream: Function that get queries and prints 
+    numbers correspending to the stream and number of stream 
+"""
+
+def print_from_stream(n, queries):
+    for query in queries:
+        parts = query.split()
+        stream_name, n = parts[0], int(parts[1])
+        if stream_name == "even":
+            print_from_stream(n, evenStream)
+        elif stream_name == "odd":
+            print_from_stream(n, oddStream)

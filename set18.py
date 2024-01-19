@@ -21,3 +21,18 @@ def team(matrix, n, m):
             nbrSol += 1
 
     return nbrSol
+
+
+"""
+    Description:  Rearrange the summans and print the 
+    sum in such a way that Xenia can calculate the sum.
+    
+    helpfulMath: Function that return the new sum that Xenia can count.
+"""
+
+
+def helpfulMath(statement):
+    numbers = list(map(int, statement.split("+")))
+    sorted_numbers = sorted(numbers)
+    new_statement = "+".join(map(str, sorted_numbers))
+    return new_statement

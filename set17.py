@@ -12,7 +12,10 @@ def nextRound(n,k, nums):
     return count
 
 """
-    Function that 
+    Description: Operation ++ increases the value of variable x by 1.
+                 Operation -- decreases the value of variable x by 1
+                 
+    Function that return the final value of x.
 """
 def bitPlus(n, statements):
     x = 0
@@ -34,5 +37,26 @@ def bitPlus(n, statements):
 """
 def dominoPiling(n, m):
     num = n*m
-    return num // 2    
+    return num // 2 
 
+"""
+    Description: The strings consist of uppercase and lowercase Latin letters.
+    Now Petya wants to compare those two strings lexicographically. 
+    The letters' case does not matter, that is an uppercase letter is 
+    considered equivalent to the corresponding lowercase letter 
+    
+    petyaString : Function that return "-1" If the first string is less 
+    than the second one, and "1" If the second string is less than the first on, 
+    otherwaise return "0" (equal strings)
+"""   
+def petyaString(statement1, statement2):
+    statement1 = statement1.lower()
+    statement2 = statement2.lower()
+
+    for letter1, letter2 in zip(statement1, statement2):
+        if letter1 < letter2:
+            return -1
+        elif letter1 > letter2:
+            return 1
+
+    return 0

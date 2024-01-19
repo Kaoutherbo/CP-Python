@@ -24,3 +24,15 @@ def bitPlus(n, statements):
             x -= 1
 
     return x
+
+""" 
+    Description : You are given a rectangular board of M × N squares. 
+    Also you are given an unlimited number of standard 
+    domino pieces of 2 × 1 squares. You are allowed to rotate the pieces.
+    
+    dominoPiling : Function that find the maximal number of dominoes, which can be placed.
+"""
+def dominoPiling(n, m):
+    num = n*m
+    return num // 2    
+

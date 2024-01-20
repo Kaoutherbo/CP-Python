@@ -54,3 +54,22 @@ def keyBoard(pos, statement):
             newStatement.append(keyboard[index])
 
     return "".join(newStatement)
+
+
+"""
+    multiplyby: Function that return he minimum number of moves needed to obtain 1 from n
+    if it's possible to do that or -1 if it's impossible to obtain 1 from n
+"""
+
+def multiplyby(num):
+    count = 0
+    while num != 1:
+        if num % 6 == 0:
+            num //= 6
+        elif num % 3 == 0:
+            num *= 2
+        else:
+            return -1
+        count += 1
+    
+    return count

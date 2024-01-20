@@ -23,3 +23,15 @@ def sale(nums, m):
     return money
 
 
+"""
+    newYearNumber: Function that return YES if the year can written with 2020 and 2021 
+    and NO otherwise
+"""
+def newYearNumber(year):
+    while(year > 2021):
+        year -= 2020
+    
+    if year == 2021:
+        return "YES"
+    else:
+        return "NO"

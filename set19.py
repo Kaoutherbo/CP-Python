@@ -35,3 +35,22 @@ def newYearNumber(year):
         return "YES"
     else:
         return "NO"
+  
+  
+    """
+    keyBoard: Function that return the new statement after fix it
+    """
+  
+def keyBoard(pos, statement):
+    keyboard = "qwertyuiopasdfghjkl;zxcvbnm,./"
+    newStatement = []
+
+    for letter in statement:
+        if pos == "R":
+            index = keyboard.find(letter) - 1
+            newStatement.append(keyboard[index])
+        elif pos == "L":
+            index = keyboard.find(letter) + 1
+            newStatement.append(keyboard[index])
+
+    return "".join(newStatement)

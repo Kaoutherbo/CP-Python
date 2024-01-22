@@ -1,4 +1,7 @@
-
+"""
+    oddDivisor: Function that check if number has odd divisors greater 
+    then 1 and return YES,otherwise return NO
+"""
 
 def oddDivisor(n):
     for i in range(2, n//2 + 1):
@@ -21,6 +24,12 @@ def sale(nums, m):
             m -= 1
 
     return money
+
+
+# def candies(num):
+    
+
+
 
 
 """
